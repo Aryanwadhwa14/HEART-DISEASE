@@ -75,5 +75,4 @@ This project aims to predict the presence of heart disease in patients and creat
 4.Launch the Streamlit dashboard: 
   ```bash
   streamlit run heart_disease_dashboard.py
-
 5.View predictions and profiles through the interactive web interface.
