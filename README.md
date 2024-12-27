@@ -67,3 +67,13 @@ This project aims to predict the presence of heart disease in patients and creat
    ```bash
    git clone https://github.com/your-repo-name/heart-disease-project.git
    cd heart-disease-project
+2. Install required dependencies:
+   ```bash
+   pip install -r requirements.txt
+3. Run the notebook for analysis and model training:
+   ```bash
+   jupyter notebook HEART_DISEASE_DATASET.ipynb
+4.Launch the Streamlit dashboard: 
+  ```bash
+  streamlit run heart_disease_dashboard.py
+5.View predictions and profiles through the interactive web interface.
