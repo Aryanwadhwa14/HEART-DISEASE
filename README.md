@@ -65,8 +65,7 @@ This project aims to predict the presence of heart disease in patients and creat
 ### Steps to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo-name/heart-disease-project.git
-   cd heart-disease-project
+   git clone https://github.com/Aryanwadhwa14/HEART-DISEASE
 2. Install required dependencies:
    ```bash
    pip install -r requirements.txt
@@ -76,4 +75,5 @@ This project aims to predict the presence of heart disease in patients and creat
 4.Launch the Streamlit dashboard: 
   ```bash
   streamlit run heart_disease_dashboard.py
+
 5.View predictions and profiles through the interactive web interface.
