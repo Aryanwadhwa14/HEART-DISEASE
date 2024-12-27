@@ -1,6 +1,3 @@
-### **README.md**
-
-```markdown
 # Heart Disease Prediction and Patient Profiling
 
 This project aims to predict the presence of heart disease in patients and create distinct patient profiles based on their risk factors. By combining predictive modeling with clustering techniques, the project provides actionable insights into heart disease risks, helping clinicians and stakeholders better understand and address key risk factors.
@@ -68,67 +65,5 @@ This project aims to predict the presence of heart disease in patients and creat
 ### Steps to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Aryanwadhwa14/HEART-DISEASE
-   ```
-
-2. Install required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Run the notebook for analysis and model training:
-   ```bash
-   jupyter notebook HEART_DISEASE_DATASET.ipynb
-   ```
-
-4. Launch the Streamlit dashboard:
-   ```bash
-   streamlit run heart_disease_dashboard.py
-   ```
-
-5. View predictions and profiles through the interactive web interface.
-
----
-
-## Results
-
-- **Model Performance**:
-  - Logistic Regression: Accuracy = 85%, ROC-AUC = 0.89
-  - Random Forest: Accuracy = 90%, ROC-AUC = 0.92
-
-- **Clustering Insights**:
-  - Three clusters identified, highlighting distinct patient risk profiles based on clinical features.
-
----
-
-## File Structure
-
-```
-heart-disease-project/
-│
-├── data/
-│   └── heart_disease.csv           # Dataset file
-├── HEART_DISEASE_DATASET.ipynb     # Jupyter Notebook for analysis
-├── heart_disease_dashboard.py      # Streamlit dashboard code
-├── requirements.txt                # Python dependencies
-└── README.md                       # Project documentation
-```
-
----
-
-## Future Enhancements
-
-- Add more advanced models like XGBoost or SVM.
-- Integrate explainability tools like SHAP for feature importance.
-- Deploy the web dashboard online using Streamlit Cloud or Heroku.
-- Expand dataset with more features for better clustering and predictions.
-
----
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
----
+   git clone https://github.com/your-repo-name/heart-disease-project.git
+   cd heart-disease-project
