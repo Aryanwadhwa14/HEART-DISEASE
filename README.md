@@ -1,89 +1,110 @@
 # Heart Disease Prediction and Patient Profiling
 
-This project aims to predict the presence of heart disease in patients and create distinct patient profiles based on their risk factors. By combining predictive modeling with clustering techniques, the project provides actionable insights into heart disease risks, helping clinicians and stakeholders better understand and address key risk factors.
+This project aims to predict the presence of heart disease in patients using Machine Learning (ML) and Deep Learning (DL) models while segmenting patients into actionable profiles based on their clinical features. By combining predictive analytics with clustering, the project enhances the understanding of heart disease risks, aiding clinicians and stakeholders in making informed decisions.
 
 ---
 
-## Project Overview
+## **Project Overview**
 
-- **Objective**: Develop a machine learning model to predict heart disease and cluster patients into meaningful profiles based on their features.
-- **Key Features**:
-  - Predict the presence of heart disease using classification algorithms and Artificial Neural Networks (ANN).
-  - Cluster patients into distinct profiles based on shared characteristics.
-  - Analyze feature importance to understand key risk factors.
-  - Provide a web-based dashboard for interactive analysis and risk scoring.
+### Objectives:
+- Predict the presence of heart disease using advanced ML and DL algorithms, including Artificial Neural Networks (ANN) and Recurrent Neural Networks (RNN).
+- Create distinct patient profiles using clustering methods like K-Means.
+- Provide a web-based dashboard for interactive predictions and data exploration.
+
+### Key Features:
+1. **Predictive Modeling**:
+   - Train classification models (Logistic Regression, Random Forest, ANN, RNN).
+   - Evaluate models for optimal performance using metrics like accuracy and ROC-AUC.
+2. **Patient Profiling**:
+   - Group patients into meaningful clusters using K-Means.
+   - Validate clusters with metrics such as Silhouette Score.
+3. **Web Dashboard**:
+   - Interactive dashboard for user-friendly predictions and visualizations.
 
 ---
 
-## Dataset Information
+## **Dataset Details**
 
-- **Dataset Source**: [Specify source or "Uploaded Dataset"]
-- **Structure**:
+- **Dataset Structure**:
   - **IDs**: Unique patient identifiers.
   - **Features**: Clinical measurements like age, cholesterol levels, and blood pressure.
   - **Target**: Binary variable indicating the presence (1) or absence (0) of heart disease.
 
-### Metadata
-| **Variable Name** | **Role**     | **Type**         | **Description**                 | **Units**     | **Missing Values** |
-|--------------------|--------------|------------------|---------------------------------|---------------|---------------------|
-| `age`             | Feature      | Continuous       | Age of the patient             | Years         | No                  |
-| `cholesterol`     | Feature      | Continuous       | Cholesterol level              | mg/dL         | No                  |
-| `blood_pressure`  | Feature      | Continuous       | Blood pressure                 | mmHg          | No                  |
-| `target`          | Target       | Categorical (0/1)| Presence of heart disease       | -             | No                  |
+| **Variable Name**   | **Role**   | **Type**         | **Description**              | **Units**    | **Missing Values** |
+|----------------------|------------|------------------|------------------------------|--------------|---------------------|
+| `age`               | Feature    | Continuous       | Age of the patient           | Years        | No                  |
+| `cholesterol`       | Feature    | Continuous       | Cholesterol level            | mg/dL        | No                  |
+| `blood_pressure`    | Feature    | Continuous       | Blood pressure               | mmHg         | No                  |
+| `target`            | Target     | Categorical (0/1)| Presence of heart disease    | -            | No                  |
 
 ---
 
-## Workflow
+## **Project Workflow**
 
 1. **Data Preprocessing**:
-   - Handle missing values and outliers.
-   - Normalize or standardize features for consistency.
+   - Handle missing values and normalize the features.
+   - Reshape input data for DL models (e.g., ANN and RNN).
 
-2. **Heart Disease Prediction**:
-   - Train classification models (e.g., Logistic Regression, Random Forest).
-   - Train an Artificial Neural Network (ANN) for improved accuracy and performance.
-   - Evaluate models using metrics like Accuracy, Precision, Recall, and ROC-AUC.
+2. **Modeling**:
+   - **Machine Learning Models**:
+     - Logistic Regression
+     - Random Forest
+   - **Deep Learning Models**:
+     - Artificial Neural Network (ANN)
+     - Recurrent Neural Network (RNN)
 
-3. **Patient Profiling**:
-   - Apply clustering techniques (e.g., K-Means) to group patients.
-   - Validate clusters using metrics like Silhouette Score and Davies-Bouldin Index.
+3. **Clustering**:
+   - Apply K-Means clustering to group patients based on risk factors.
+   - Evaluate cluster quality with Silhouette Score and Davies-Bouldin Index.
 
-4. **Risk Scoring**:
-   - Combine prediction results and clustering for risk categorization (Low, Medium, High).
-
-5. **Web Dashboard**:
-   - Interactive dashboard using Streamlit for data visualization and predictions.
+4. **Web Dashboard**:
+   - Develop an interactive dashboard using Streamlit for predictions and visualizations.
 
 ---
 
-## Artificial Neural Network (ANN) Model
+## **Deep Learning Models**
 
+### 1. **Artificial Neural Network (ANN)**
 - **Architecture**:
-  - Input Layer: Takes normalized clinical features such as age, cholesterol, and blood pressure.
-  - Hidden Layers: Two fully connected layers with ReLU activation for non-linearity.
-  - Output Layer: A single neuron with sigmoid activation to output the probability of heart disease.
-  
-- **Training Details**:
-  - Loss Function: Binary Cross-Entropy.
-  - Optimizer: Adam.
-  - Epochs: 100 (configurable).
-  - Batch Size: 32.
+  - Input Layer: Clinical features.
+  - Hidden Layers: Two fully connected layers with ReLU activation.
+  - Output Layer: Single neuron with sigmoid activation for binary classification.
 
-- **Model Code**:
-```python
-import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
+- **Training**:
+  - Optimizer: Adam
+  - Loss Function: Binary Cross-Entropy
+  - Epochs: 50
 
-# Define ANN model
-model = Sequential([
-    Dense(64, activation='relu', input_dim=X_train.shape[1]),
-    Dense(32, activation='relu'),
-    Dense(1, activation='sigmoid')
-])
+- **Performance**:
+  - Accuracy: ~47%
+  - ROC-AUC: 0.50
 
-# Compile the model
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+### 2. **Recurrent Neural Network (RNN)**
+- **Architecture**:
+  - Input Layer: Features reshaped to mimic sequential data.
+  - LSTM Layer: Processes temporal patterns in the input.
+  - Dense Layers: Outputs binary predictions.
 
-# Train the model
-history = model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data=(X_test, y_test))
+- **Training**:
+  - Optimizer: Adam
+  - Loss Function: Binary Cross-Entropy
+  - Epochs: 100
+
+- **Performance**:
+  - Accuracy: ~90%
+  - ROC-AUC: 0.9
+
+---
+
+## **How to Run**
+
+### Prerequisites:
+- Python 3.7 or above
+- Jupyter Notebook
+- Libraries: `pandas`, `numpy`, `scikit-learn`, `tensorflow`, `matplotlib`, `streamlit`
+
+### Steps:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/heart-disease-prediction.git
+   cd heart-disease-prediction
