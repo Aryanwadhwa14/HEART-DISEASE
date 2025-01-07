@@ -106,5 +106,5 @@ This project aims to predict the presence of heart disease in patients using Mac
 ### Steps:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/heart-disease-prediction.git
-   cd heart-disease-prediction
+   git clone https://github.com/your-repo/HEART-DISEASE.git
+   cd HEART-DISEASE 
