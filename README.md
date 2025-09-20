@@ -42,11 +42,11 @@ This project combines **predictive analytics** with **patient clustering** to pr
 
 ## Model Architecture
 
-### 🧠 Neural Networks
+### Neural Networks
 **ANN**: Input(13) → Dense(64,ReLU) → Dense(32,ReLU) → Output(1,Sigmoid)
 **RNN**: Input(Sequential) → LSTM(50) → Dropout(0.2) → Dense(25,ReLU) → Output(1,Sigmoid)
 
-### 📊 Clustering
+### Clustering
 **K-Means**: 3 clusters (Low/Medium/High Risk) with Silhouette Score validation
 
 ---
