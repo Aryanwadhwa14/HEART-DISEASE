@@ -18,10 +18,10 @@
 This project combines **predictive analytics** with **patient clustering** to provide comprehensive heart disease risk assessment. The system uses both Machine Learning and Deep Learning approaches to predict heart disease likelihood while segmenting patients into distinct risk profiles for personalized healthcare interventions.
 
 ### Key Features
-- 🔮 **Predictive Modeling**: ANN, RNN, Random Forest, Logistic Regression
-- 👥 **Patient Profiling**: K-Means clustering for risk segmentation
-- 📊 **Interactive Dashboard**: Real-time predictions with visualizations
-- 🧠 **Model Comparison**: Performance analysis across multiple algorithms
+- **Predictive Modeling**: ANN, RNN, Random Forest, Logistic Regression
+- **Patient Profiling**: K-Means clustering for risk segmentation
+- **Interactive Dashboard**: Real-time predictions with visualizations
+- **Model Comparison**: Performance analysis across multiple algorithms
 
 ---
 
@@ -158,9 +158,9 @@ Response:
 
 <div align="center" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 15px; border-radius: 8px; margin: 15px 0;">
 
-### 🏆 **PATENT RECOGNITION**
+### **PATENT RECOGNITION**
 
-**This heart disease prediction system has been officially recognized and patented by the Harvard Innovation Lab, demonstrating its novel approach in combining ML/DL models with patient clustering for cardiovascular risk assessment.**
+**This heart disease prediction system has been officially recognized and patented by the Harvard Innovation Labs, demonstrating its novel approach in combining ML/DL models with patient clustering for cardiovascular risk assessment.**
 
 </div>
 
