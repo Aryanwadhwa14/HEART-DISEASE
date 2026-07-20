@@ -7,7 +7,7 @@
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0+-orange?style=for-the-badge&logo=tensorflow)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-green?style=for-the-badge&logo=streamlit)
 
-**Advanced ML/DL system for heart disease prediction with patient segmentation** 
+**Advanced ML/DL system for heart disease prediction with patient segmentation**  
 
 </div>
 
